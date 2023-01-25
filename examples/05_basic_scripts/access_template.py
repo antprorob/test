@@ -5,4 +5,13 @@ access_template = ['switchport mode access',
                    'spanning-tree portfast',
                    'spanning-tree bpduguard enable']
 
-print('\n'.join(access_template).format(5))
+from pprint import pprint 
+# pprint(access_template)
+
+vlan = input ("Введите номер vlan: ")
+intf = input ("Введите номер интерфейса: ")
+input ("Нажимте любую клавишу для продложения")
+print(f"interface {intf}")
+access_str = "\n".join(access_template)
+# pprint(access_str)
+print(access_str.format(vlan))
